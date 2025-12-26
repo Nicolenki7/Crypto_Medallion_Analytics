@@ -16,7 +16,7 @@ Este ecosistema fue diseñado con un enfoque de **pensamiento crítico**, priori
 
 El proceso comienza con una arquitectura **Medallion** implementada en **Microsoft Fabric**. La clave aquí fue la flexibilidad: utilicé un enfoque híbrido para garantizar que la ingesta no solo fuera rápida, sino resiliente.
 
-![Pipeline de Datos](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/pipeline.png)
+![Pipeline de Datos](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/img/pipeline.png)
 
 * **Ingesta (Bronze):** Combinación de **Dataflows Gen2** para conectividad estructurada y **Notebooks de PySpark** para la carga masiva de históricos.
 * **Refinamiento (Silver):** Limpieza, tipado y normalización para eliminar inconsistencias de origen.
@@ -28,7 +28,7 @@ El proceso comienza con una arquitectura **Medallion** implementada en **Microso
 
 Una vez refinados, los datos convergen en la capa **Gold**. Aquí es donde la ingeniería se encuentra con la estrategia.
 
-![Modelo Semántico Gold](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/modelosemantico_gold.png)
+![Modelo Semántico Gold](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/img/modelosemantico_gold.png)
 
 Este **Modelo Semántico** fue diseñado para soportar consultas de alto rendimiento. Al estructurar las relaciones entre activos, tiempos y métricas de rendimiento, permitimos que el motor de Power BI analice millones de registros con latencia mínima, manteniendo la integridad de las dimensiones de negocio.
 
@@ -39,17 +39,17 @@ Este **Modelo Semántico** fue diseñado para soportar consultas de alto rendimi
 El dashboard no es descriptivo, es **interrogativo**. Está diseñado para responder preguntas críticas de inversión a través de tres niveles de profundidad:
 
 ### Hoja 1: Panorama General y Estado del Mercado
-![Dashboard Hoja 1](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/dashboard_final_!.png)
+![Dashboard Hoja 1](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/img/dashboard_final_!.png)
 * **Pregunta de Negocio:** ¿Cuál es el estado actual de los activos y cómo se comparan entre sí en términos de volumen y valor?
 * **Respuesta:** Mediante KPIs de alto nivel y comparativas directas, esta hoja permite identificar rápidamente qué activos están liderando el mercado y cuáles presentan anomalías en sus precios de apertura.
 
 ### Hoja 2: Análisis de Riesgo y Validación de Tendencias
-![Dashboard Hoja 2](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/dashboard_final2.png)
+![Dashboard Hoja 2](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/img/dashboard_final2.png)
 * **Pregunta de Negocio:** ¿Este movimiento de precio tiene respaldo real o es pura volatilidad?
 * **Análisis Técnico:** Aquí analizamos la convergencia entre **Volumen y Estabilidad**. Al observar los gráficos de dispersión, el inversor puede detectar si un rally de precios está "respaldado" por liquidez. Si el precio sube pero el volumen se estanca, el gráfico nos advierte de un posible riesgo. Es una matriz de correlación visual para la supervivencia financiera.
 
 ### Hoja 3: Performance Histórico y Rankings
-![Dashboard Hoja 3](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/dashboard_final3.png)
+![Dashboard Hoja 3](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/img/dashboard_final3.png)
 * **Pregunta de Negocio:** ¿Cómo se posiciona cada activo en el largo plazo y cuál es su tendencia de retorno real?
 * **Respuesta:** A través de rankings anuales y tendencias de performance, identificamos los activos con mayor resiliencia. No miramos la foto del día, miramos la película completa para entender la convergencia del valor en el tiempo.
 
@@ -59,7 +59,7 @@ El dashboard no es descriptivo, es **interrogativo**. Está diseñado para respo
 
 El proyecto culmina con un modelo de **Regresión Lineal** entrenado para predecir el precio de cierre mensual basado en variables de la capa Gold (Precio de Inicio, Volatilidad y Volumen).
 
-![Análisis de Machine Learning](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/machine_learning.png)
+![Análisis de Machine Learning](https://github.com/Nicolenki7/Crypto_Medallion_Analytics/raw/a36083d8ecf27beb88da5b37a0341a340beee8ab/img/machine_learning.png)
 
 ### El Caso de Bitcoin
 En la visualización superior, podemos observar el comportamiento de la regresión. La línea roja no es una simple diagonal; es una **representación multidimensional** que "va y vuelve" porque el modelo está ajustando la predicción no solo al precio, sino al impacto de la volatilidad y el volumen de cada mes. 
