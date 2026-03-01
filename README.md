@@ -1,80 +1,222 @@
-# 🚀 Crypto Medallion Ecosystem: De la Ingeniería a la Inferencia Predictiva
+# 📊 Crypto Medallion Analytics
 
-**Nicolas Zalazar** | Data & ML Engineer  
-**Stack Tecnológico:** Microsoft Fabric (Lakehouse), PySpark, Dataflows Gen2, MLflow, Power BI, Streamlit.
+**Medallion Architecture for DeFi | PySpark | MLflow | Power BI Dashboard**
 
----
-
-## 📖 Storytelling: El Desafío de la Claridad en el Caos
-En el mercado de criptoactivos, los datos abundan pero la sabiduría escasea. El problema central no es la falta de información, sino el **ruido**. ¿Es un aumento de precio una tendencia orgánica o una anomalía sin liquidez? 
-
-Este ecosistema fue diseñado con un enfoque de **pensamiento crítico**, priorizando la relación señal-ruido. No es solo un pipeline; es una herramienta de toma de decisiones que recorre todo el ciclo de vida del dato: desde el bit crudo hasta la predicción basada en evidencia.
+[![Microsoft Fabric](https://img.shields.io/badge/Microsoft_Fabric-F34F21?logo=microsoft)](https://fabric.microsoft.com/)
+[![PySpark](https://img.shields.io/badge/PySpark-E3492F?logo=apachespark)](https://spark.apache.org/)
+[![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow)](https://mlflow.org/)
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi)](https://powerbi.microsoft.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 🏗️ Fase 1: Ingeniería de Datos y Orquestación (Pipeline)
+## 📋 Overview
 
-El proceso comienza con una arquitectura **Medallion** implementada en **Microsoft Fabric**. La clave aquí fue la flexibilidad: utilicé un enfoque híbrido para garantizar que la ingesta no solo fuera rápida, sino resiliente.
+Complete data pipeline implementing **Bronze → Silver → Gold** Medallion Architecture for cryptocurrency market analysis with predictive ML models. Built on Microsoft Fabric with PySpark ETL, MLflow tracking, and Power BI visualization.
 
-![Pipeline de Datos](img/pipeline.png)
-
-* **Ingesta (Bronze):** Combinación de **Dataflows Gen2** para conectividad estructurada y **Notebooks de PySpark** para la carga masiva de históricos.
-* **Refinamiento (Silver):** Limpieza, tipado y normalización para eliminar inconsistencias de origen.
-* **Servicio de ML:** El pipeline culmina integrando directamente el servicio de entrenamiento y análisis, cerrando el ciclo de ingeniería.
+This project demonstrates production-ready patterns for DeFi analytics with volume-backed trend validation and signal-vs-noise analysis.
 
 ---
 
-## 📂 Fase 2: El Corazón del Negocio (Modelo Semántico)
+## 💼 Business Impact
 
-Una vez refinados, los datos convergen en la capa **Gold**. Aquí es donde la ingeniería se encuentra con la estrategia.
-
-![Modelo Semántico Gold](img/modelosemantico_gold.png)
-
-Este **Modelo Semántico** fue diseñado para soportar consultas de alto rendimiento. Al estructurar las relaciones entre activos, tiempos y métricas de rendimiento, permitimos que el motor de Power BI analice millones de registros con latencia mínima, manteniendo la integridad de las dimensiones de negocio.
-
----
-
-## 📊 Fase 3: Business Intelligence - El Dashboard Estratégico
-
-El dashboard no es descriptivo, es **interrogativo**. Está diseñado para responder preguntas críticas de inversión a través de tres niveles de profundidad:
-
-### Hoja 1: Panorama General y Estado del Mercado
-![Dashboard Hoja 1](img/dashboard_final_!.png)
-* **Pregunta de Negocio:** ¿Cuál es el estado actual de los activos y cómo se comparan entre sí en términos de volumen y valor?
-* **Respuesta:** Mediante KPIs de alto nivel y comparativas directas, esta hoja permite identificar rápidamente qué activos están liderando el mercado y cuáles presentan anomalías en sus precios de apertura.
-
-### Hoja 2: Análisis de Riesgo y Validación de Tendencias
-![Dashboard Hoja 2](img/dashboard_final2.png)
-* **Pregunta de Negocio:** ¿Este movimiento de precio tiene respaldo real o es pura volatilidad?
-* **Análisis Técnico:** Aquí analizamos la convergencia entre **Volumen y Estabilidad**. Al observar los gráficos de dispersión, el inversor puede detectar si un rally de precios está "respaldado" por liquidez. Si el precio sube pero el volumen se estanca, el gráfico nos advierte de un posible riesgo. Es una matriz de correlación visual para la supervivencia financiera.
-
-### Hoja 3: Performance Histórico y Rankings
-![Dashboard Hoja 3](img/dashboard_final3.png)
-* **Pregunta de Negocio:** ¿Cómo se posiciona cada activo en el largo plazo y cuál es su tendencia de retorno real?
-* **Respuesta:** A través de rankings anuales y tendencias de performance, identificamos los activos con mayor resiliencia. No miramos la foto del día, miramos la película completa para entender la convergencia del valor en el tiempo.
+- **Signal-vs-Noise Analysis**: Filters market volatility to identify actionable trends
+- **Volume-Backed Validation**: Correlates price movements with trading volume
+- **Risk/Volume Correlation**: Understand relationship between volatility and liquidity
+- **ML-Driven Insights**: Linear Regression price prediction with tracked experiments
 
 ---
 
-## 🧠 Fase 4: Machine Learning - Inferencia Predictiva
+## 🛠️ Technical Stack
 
-El proyecto culmina con un modelo de **Regresión Lineal** entrenado para predecir el precio de cierre mensual basado en variables de la capa Gold (Precio de Inicio, Volatilidad y Volumen).
-
-![Análisis de Machine Learning](img/machine_learning.png)
-
-### El Caso de Bitcoin
-En la visualización superior, podemos observar el comportamiento de la regresión. La línea roja no es una simple diagonal; es una **representación multidimensional** que "va y vuelve" porque el modelo está ajustando la predicción no solo al precio, sino al impacto de la volatilidad y el volumen de cada mes. 
-* **R² de 0.9863:** Un nivel de precisión altísimo que valida nuestras variables de entrada.
-* **Uso Práctico:** El modelo nos permite simular: *"Si la volatilidad proyectada es X, ¿cuál es el precio de salida esperado?"*. Esto transforma la intuición en cálculo.
-
----
-
-## 🚀 Despliegue y Acceso Directo
-
-Para democratizar estos insights, he desplegado una Web App interactiva donde se puede interactuar con el modelo de ML en tiempo real.
-
-🔗 **[Acceder al Simulador Predictivo en Streamlit](https://crypto-medallion-ml-app-mq3eccyg95sxpc7ytwgoiv.streamlit.app/)**
+| Category | Technologies |
+| :--- | :--- |
+| **Platform** | Microsoft Fabric |
+| **Data Engineering** | PySpark, Dataflows Gen2 |
+| **Data Storage** | OneLake, Delta Lake (Bronze/Silver/Gold) |
+| **Machine Learning** | Linear Regression, MLflow |
+| **BI & Analytics** | Power BI, DAX |
 
 ---
 
-## 🎯 Conclusión
-Este ecosistema demuestra que la ingeniería de datos, cuando se aplica con rigor y sentido de negocio, puede reducir drásticamente la incertidumbre. Desde la automatización del pipeline en Fabric hasta la inferencia en la nube con Streamlit, cada paso fue diseñado para maximizar la señal y entregar valor real.
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              CRYPTO MEDALLION ARCHITECTURE                   │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  BRONZE LAYER (Raw)                                         │
+│  └─→ Raw crypto prices from APIs                            │
+│      - No transformation, immutable storage                 │
+│                                                              │
+│  SILVER LAYER (Cleaned)                                     │
+│  └─→ Validated, deduplicated, type-corrected                │
+│      - Schema enforcement, null handling                    │
+│                                                              │
+│  GOLD LAYER (Business-Ready)                                │
+│  └─→ Aggregated features for analytics                      │
+│      - Monthly metrics, volatility, volume                  │
+│      - ML-ready feature sets                                │
+│                                                              │
+│  ML LAYER (Predictions)                                     │
+│  └─→ Linear Regression with MLflow tracking                 │
+│      - Price prediction models                              │
+│      - Experiment tracking, model registry                  │
+│                                                              │
+│  CONSUMPTION LAYER (Power BI)                               │
+│  └─→ Interactive dashboard with DAX measures                │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🚀 Key Features
+
+### Medallion Data Pipeline
+- **Bronze**: Raw immutable storage
+- **Silver**: Cleaned, validated data
+- **Gold**: Business-ready aggregated features
+
+### MLflow Integration
+- **Experiment Tracking**: Model performance across runs
+- **Model Registry**: Versioned model storage
+- **Metrics**: R², MAE, RMSE tracking
+
+### Power BI Dashboard
+- **Price Trends**: Historical price visualization
+- **Volume Analysis**: Trading volume correlations
+- **Risk Metrics**: Volatility and drawdown analysis
+- **ML Predictions**: Model forecasts overlay
+
+---
+
+## 📊 Results & Metrics
+
+| Metric | Value |
+| :--- | :--- |
+| **Architecture** | Bronze → Silver → Gold (Medallion) |
+| **ML Model** | Linear Regression (MLflow tracked) |
+| **Key Features** | Price, volatility, volume correlations |
+| **Dashboard** | Power BI with DAX measures |
+
+---
+
+## 📁 Project Structure
+
+```
+Crypto_Medallion_Analytics/
+├── data/                              # Raw and processed data
+├── pyspark/                           # PySpark ETL notebooks
+│   ├── bronze_ingestion.py
+│   ├── silver_transformation.py
+│   └── gold_aggregation.py
+├── ml/                                # Machine learning code
+│   ├── train_model.py
+│   └── mlflow_tracking.py
+├── power_bi/                          # Power BI reports
+├── img/                               # Dashboard screenshots
+└── README.md                          # Project documentation
+```
+
+---
+
+## 🔧 Setup & Installation
+
+### Prerequisites
+- Microsoft Fabric capacity (F64 or higher)
+- Power BI Desktop (latest version)
+- Fabric workspace permissions
+
+### Deployment Steps
+
+```bash
+# Clone the repository
+git clone https://github.com/Nicolenki7/Crypto_Medallion_Analytics.git
+cd Crypto_Medallion_Analytics
+
+# 1. Create Fabric Workspace
+# 2. Run PySpark notebooks for Bronze/Silver/Gold layers
+# 3. Configure MLflow tracking
+# 4. Train ML models
+# 5. Import Power BI report
+# 6. Configure DAX measures
+```
+
+---
+
+## 📈 Usage
+
+### Dashboard Features
+
+| Visualization | Purpose |
+| :--- | :--- |
+| **Price Trends** | Historical price movements |
+| **Volume Correlation** | Price vs trading volume |
+| **Volatility Analysis** | Risk metrics over time |
+| **ML Predictions** | Model forecasts |
+
+### Key Metrics
+- **Precio_Inicio_Mes**: Month opening price
+- **Precio_Fin_Mes**: Month closing price
+- **Volatilidad_Media_Mensual**: Average monthly volatility
+- **Volumen_Promedio_Mensual**: Average monthly volume
+
+---
+
+## 🎯 Key Learnings
+
+- **Medallion Architecture** provides clear data quality boundaries
+- **MLflow integration** enables reproducible ML experiments
+- **Volume-backed analysis** filters false price signals
+- **Power BI + Fabric** enables seamless analytics workflow
+
+---
+
+## 🔮 Future Enhancements
+
+- [ ] Real-time crypto API ingestion
+- [ ] Advanced ML models (LSTM, Prophet for time series)
+- [ ] Multi-asset correlation analysis
+- [ ] Automated retraining pipeline
+- [ ] Alert system for price anomalies
+
+---
+
+## 🔗 Links
+
+| Resource | URL |
+| :--- | :--- |
+| **Repository** | https://github.com/Nicolenki7/Crypto_Medallion_Analytics |
+| **Live Dashboard** | [View in Fabric](https://app.fabric.microsoft.com/reportEmbed?reportId=ef628e11-1d49-421b-8a9d-b82867bf8d37) |
+| **Related Project** | [Crypto Medallion ML App](https://github.com/Nicolenki7/crypto-medallion-ml-app) |
+
+---
+
+## 📝 Resumen en Español
+
+Pipeline completo de datos implementando arquitectura **Medallion (Bronze → Silver → Gold)** para análisis de mercado de criptomonedas con modelos predictivos de ML.
+
+Construido en Microsoft Fabric con ETL PySpark, tracking MLflow, y visualización Power BI. Incluye análisis de correlación riesgo/volumen y validación de tendencias respaldadas por volumen.
+
+---
+
+## 📄 License
+
+MIT License — Feel free to fork, modify, and use for personal or commercial projects.
+
+---
+
+## 👤 Author
+
+**Nicolás Zalazar** | Senior Data Engineer & Microsoft Fabric Specialist
+
+- GitHub: [@Nicolenki7](https://github.com/Nicolenki7)
+- LinkedIn: [nicolas-zalazar-63340923a](https://www.linkedin.com/in/nicolas-zalazar-63340923a)
+- Portfolio: [nicolenki7.github.io/Portfolio](https://nicolenki7.github.io/Portfolio/)
+- Email: zalazarn046@gmail.com
+
+---
+
+*Last Updated: March 2026*
