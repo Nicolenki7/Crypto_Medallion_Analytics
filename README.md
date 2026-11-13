@@ -10,6 +10,12 @@
 
 ---
 
+## 📊 Interactive report
+
+**[Open the interactive report →](https://nicolenki7.github.io/Crypto_Medallion_Analytics/report.html)** — the 100 coins ranked, filterable, rebuilt from the committed CSVs.
+
+---
+
 ## 📋 Overview
 
 A **Bronze → Silver → Gold** Medallion pipeline over crypto market data, built on Microsoft Fabric with PySpark ETL, MLflow tracking and a Power BI consumption layer.
@@ -89,8 +95,10 @@ Crypto_Medallion_Analytics/
 │   └── modelo_gold_final_v1.py                  Gold layer + Linear Regression model
 ├── src/
 │   ├── crypto_charts.py                         the three charts in this README (SVG)
+│   ├── build_report.py                          builds docs/report.html from the CSVs
 │   └── svg_chart.py                             dependency-free SVG bar chart generator
 ├── docs/img/*.svg                               charts used here
+├── docs/report.html                             published report (GitHub Pages)
 ├── outputs/crypto_returns_ranked.csv            the 100 coins ranked by return
 ├── img/                                         dashboard screenshots
 └── *.pbix                                       Power BI report
@@ -122,6 +130,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 python src/crypto_charts.py     # writes docs/img/*.svg and outputs/crypto_returns_ranked.csv
+python src/build_report.py      # writes docs/report.html
 ```
 
 The notebook needs nothing installed: it reads the same CSVs straight from this repository on GitHub.
@@ -166,6 +175,7 @@ Los números del README salen del CSV versionado y los regenera `src/crypto_char
 | Resource | URL |
 | :--- | :--- |
 | **Repository** | https://github.com/Nicolenki7/Crypto_Medallion_Analytics |
+| **Interactive report** | https://nicolenki7.github.io/Crypto_Medallion_Analytics/report.html |
 | **Live Dashboard** | [View in Fabric](https://app.fabric.microsoft.com/reportEmbed?reportId=ef628e11-1d49-421b-8a9d-b82867bf8d37) |
 | **Related Project** | [Crypto Medallion ML App](https://github.com/Nicolenki7/crypto-medallion-ml-app) |
 
