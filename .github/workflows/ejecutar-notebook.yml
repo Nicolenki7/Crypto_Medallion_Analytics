@@ -26,15 +26,7 @@ jobs:
           from nbformat.v4 import new_markdown_cell
 
           RUTA = 'notebooks/crypto_medallion_colab.ipynb'
-          TEXTO = '''[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nicolenki7/Crypto_Medallion_Analytics/blob/main/notebooks/crypto_medallion_colab.ipynb)
-
-> **En 30 segundos:** 13 meses y 100 monedas: el precio medio cae 24,9 % y el retorno lo cargan unas pocas monedas, no el mercado entero.
->
-> - 13 meses de serie y 100 monedas comparadas
-> - Precio medio: 5.360 a 4.025 USD (−24,9 %)
-> - Un archivo de origen vacío detectado y documentado como fallo de pipeline, sin rellenarlo con ceros
->
-> Los resultados ya están ejecutados: no hace falta correr nada para leerlos.'''
+          TEXTO = '[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nicolenki7/Crypto_Medallion_Analytics/blob/main/notebooks/crypto_medallion_colab.ipynb)\n\n> **En 30 segundos:** 13 meses y 100 monedas: el precio medio cae 24,9 % y el retorno lo cargan unas pocas monedas, no el mercado entero.\n>\n> - 13 meses de serie y 100 monedas comparadas\n> - Precio medio: 5.360 a 4.025 USD (-24,9 %)\n> - Un archivo de origen vacío detectado y documentado como fallo de pipeline, sin rellenarlo con ceros\n>\n> Los resultados ya están ejecutados: no hace falta correr nada para leerlos.'
 
           nb = nbformat.read(RUTA, as_version=4)
           primero = ''.join(nb.cells[0].source) if nb.cells else ''
